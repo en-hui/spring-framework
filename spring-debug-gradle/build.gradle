@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+}
+
+group = "org.springframework"
+version = "6.0.14-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+/*
+从源代码构建：https://github.com/spring-projects/spring-framework/wiki/Build-from-Source
+*/
+dependencies {
+    api(project(":spring-beans"))
+    api(project(":spring-core"))
+    api(project(":spring-context"))
+    api(project(":spring-webmvc"))
+    api(project(":spring-jdbc"))
+    api(project(":spring-orm"))
+    api(project(":spring-tx"))
+    api(project(":spring-web"))
+    api(project(":spring-context-indexer"))
+    api(project(":spring-context-support"))
+    api(project(":spring-expression"))
+    api(project(":spring-instrument"))
+    api(project(":spring-jcl"))
+    api(project(":spring-jms"))
+    api(project(":spring-messaging"))
+    api(project(":spring-oxm"))
+    api(project(":spring-test"))
+    api(project(":spring-webflux"))
+    api(project(":spring-websocket"))
+    api(project(":spring-aspects"))
+    api(project(":spring-aop"))
+
+    api("org.projectlombok:lombok:1.18.26")
+    annotationProcessor("org.projectlombok:lombok:1.18.26")
+    api("org.slf4j:slf4j-api:2.0.7")
+    api("org.slf4j:slf4j-log4j12:2.0.7")
+}
